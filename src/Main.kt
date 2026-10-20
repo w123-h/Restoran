@@ -61,8 +61,6 @@ suspend fun cookOrder(order: Order) = coroutineScope {
     cookingJob.join()
 }
 
-// 4. Вспомнить
-
 suspend fun checkDishQuality(orderId: String): Deferred<DishResult> = coroutineScope {
     async {
         delay(3000) // дегустация шефом
