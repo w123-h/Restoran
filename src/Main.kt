@@ -99,7 +99,7 @@ suspend fun runKitchenChannel() = coroutineScope {
     // Потребитель (метрдотель)
     launch {
         for (result in channel) {
-            println("Метрдотель получил: ${result.dishName} (оценка ${"%.1f".format(result.qualityScore)})")
+            println("${result.orderId} Метрдотель получил: ${result.dishName} (оценка ${"%.1f".format(result.qualityScore)})")
         }
         println("Раздача завершена. Сводка по выданным блюдам готова.")
     }
